@@ -1,6 +1,6 @@
 export interface Game {
     background_image: string;
-    id:number
+    id:string
     name: string;
     released: string;
     metacritic_url: string;
