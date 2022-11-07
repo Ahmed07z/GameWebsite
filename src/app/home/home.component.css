@@ -1,0 +1,111 @@
+.filters{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding-left: 20px;
+}
+.filters::ng-deep .mat-form-field-infix{
+    background-color: rgb(4, 106, 146);
+    color: white;
+
+}
+.filters mat-label {
+    color: white;
+}
+.filters mat-option {
+    color: white;
+    background-color: black;
+}
+.selector{
+    color: white;
+}
+
+
+
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+
+
+  .game{
+  width: 280px;
+  margin: 10px;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #202020;
+  box-shadow: 4px 3px 8px 0px rgb(200 152 44 / 22%);
+  transition-duration: 0.3s;
+  cursor: pointer;
+   }
+  .game:hover {
+    box-shadow: 4px 3px 11px 6px rgb(200 152 44 / 46%);
+    transform: translateY(-3px);
+  }
+
+  .game-thumb-container {
+    background-color: #000;
+    position: relative;
+    height: 172px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .game-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 172px;
+  }
+
+  .game-description {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 157px;
+  }
+
+  .game-name {
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .game-platforms {
+    display: flex;
+   
+  }
+
+  .game-platform {
+    width: 20px;
+    margin-right: 10px;
+    height: 20px;
+  }
+  img.platformImage {
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+}
+.filters::ng-deep mat-option{
+  color: white;
+  background-color: white;
+}
+.filters::ng-deep .mat-select-value-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+}
+.filters::ng-deep .mat-select-arrow{
+  color: white;
+}
