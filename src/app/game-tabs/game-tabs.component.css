@@ -1,0 +1,44 @@
+.game-tabs{
+    background: rgb(90, 0, 0);
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+.game-par{
+    padding: 20px 20px 0px 20px;
+}
+.game-tab-link{
+    color: white;
+}
+.game-tabs-votes{
+    margin-left: 20px;
+    display: flex;
+    
+}
+.game-votes-count{
+    margin-left: 5px;
+    margin-right: 10px;
+    vertical-align: super;
+
+
+}
+.game::ng-deep{}
+.game-votes-up{
+    color: green;
+    
+}
+.game-votes-down{
+    color: red;
+    margin-right: 5px;
+}
+.gamescreenshot{
+    margin-top: 5px;
+    width: calc(50% - 10px);
+}
+.gamescreenshot:nth-child(even)
+{margin-left: 10px;
+}
+.game-trailer{
+    width: 100%;
+    margin: 20px 0px;;
+}

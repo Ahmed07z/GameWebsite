@@ -2,7 +2,7 @@
     <mat-form-field>
         <mat-label>Sort</mat-label>
         <mat-select class="selector" panelClass="sort-select"
-        [(ngModel)]="sort"
+        [(ngModel)]="sort" [(value)]="value"
         (selectionChange)="searchGames(sort)">
 <mat-option value="name">Name</mat-option>
 <mat-option value="-released">Released</mat-option>
@@ -13,9 +13,11 @@
 <mat-option value="-metacritic">Metacritic</mat-option>
 </mat-select>
  </mat-form-field>
+ <button class="resetsort"  (click)="ResetSort()">Reset Sort</button>
 </div>
+
 <div class="games">
-    <ng-container *ngFor="let game of games">
+    <ng-container *ngFor="let game of games | filters:searchValue">
     <div class="game" (click)="openGameDetails(game.id)">
         <div class="game-thumb-container">
             <img 
@@ -32,7 +34,7 @@
                   src="assets/images/platforms/{{ gamePlatform.platform.slug}}.svg"
                   alt="{{ gamePlatform.platform.slug|lowercase}}"
                 />
-              </div>     </div>
+              </div> </div>
     </div>
 </ng-container>
 </div>

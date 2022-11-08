@@ -1,0 +1,59 @@
+.detail-wrapper{
+    max-width: 900px;
+    margin: 20px auto;
+    position: relative;
+}
+.game-guage {
+    width: 150px;
+    height: 150px;
+
+}
+.game-guage ::ng-deep path.dial {
+    stroke-width: 10;
+} 
+.game-guage::ng-deep path.value{
+    stroke-dasharray: none;
+    stroke-width: 13px; 
+}
+.game-guage::ng-deep text.value-text{
+    fill: white;
+    font-weight: 700;
+    font-size: 24px;
+}
+.game-guage{
+    position: absolute;
+    top: 90px;
+    right: 0px;
+}
+.game-guage-lable{
+    bottom: 60px;
+    position: relative;
+    font-size: 20px;
+    color: white;
+}
+.game-banner{
+    height: 440px;
+    overflow: hidden;
+}
+.game-banner img{
+    width: 100%;
+    filter: blur(5px);
+}
+.game-content{
+    text-align: center;
+    position: relative;
+    top: -400px;
+}
+.game-header .game-header-title{
+    font-size: 70px;
+    color: white;
+    font-weight: 700;
+    line-height: 70px;
+
+}
+.game-released-date{
+    color: white;
+}
+.game-header-genres{
+    color: white;
+}

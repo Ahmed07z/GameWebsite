@@ -109,3 +109,19 @@
 .filters::ng-deep .mat-select-arrow{
   color: white;
 }
+.resetsort{
+  background: green;
+  color: white;
+  position: relative;
+  height: 39px;
+  top: -5px;
+  padding: 10px;
+  border:none;
+  border-left: 10px black;
+  margin-left: 5px;
+
+}
+.resetsort:hover{
+  color:green;
+  background-color: white;
+}

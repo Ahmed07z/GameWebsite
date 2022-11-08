@@ -1,8 +1,9 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import {Subscription} from 'rxjs';
 import {APIResponse, Game} from '../model';
 import {HttpService} from '../services/http.service';
+import {combineLatest, observable, Observable} from 'rxjs'
 
 @Component({
   selector: 'app-home',
@@ -11,14 +12,17 @@ import {HttpService} from '../services/http.service';
 })
 export class HomeComponent implements OnInit,OnDestroy{
 public sort:string="";
+value:string='defaultSort';
   public games!: Array<Game>;
   private routeSub!:Subscription;
   private gameSub!:Subscription;
+  searchValue!:string;
   constructor(
     private httpservices:HttpService,private activedRoute:ActivatedRoute,private router:Router
   ) { }
 
   ngOnInit(): void {
+    this.httpservices.currentValue.subscribe((searchValue:any) => this.searchValue=searchValue);
   this.routeSub = this.activedRoute.params.subscribe((params:Params)=>{
       if(params['game-search']){
         this.searchGames('meracrit',params['game-search']);
@@ -47,5 +51,11 @@ public sort:string="";
     }
 
   }
+  ResetSort(){
+ this.sort=''
+ this.ngOnInit();
+    }
 
-}
+  }
+
+

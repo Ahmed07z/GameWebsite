@@ -16,13 +16,17 @@ import { HomeComponent } from './home/home.component';
 import {HttpHeadersInterceptor} from './interceptors/http-headers.interceptor';
 import {HttpErrorsInterceptor} from './interceptors/http-errors.interceptor';
 import { GameDetailsComponent } from './game-details/game-details.component';
+import { GameTabsComponent } from './game-tabs/game-tabs.component';
+import{FilterPipes} from './Pipes/searchfilter.pipe'
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
     HomeComponent,
-    GameDetailsComponent
+    GameDetailsComponent,
+    FilterPipes,
+    GameTabsComponent
   ],
   imports: [
     BrowserModule,
